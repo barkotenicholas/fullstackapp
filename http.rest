@@ -1,0 +1,6 @@
+###
+POST http://localhost:7000/auth/login
+
+
+###
+POST http://localhost:7000/auth/signup
