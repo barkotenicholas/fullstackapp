@@ -5,7 +5,6 @@ Content-Type: application/json
 {
     "email":"a@gmail.com",
     "password": "passwosdsfrd"
-
 }
 
 ###
@@ -18,3 +17,19 @@ Content-Type: application/json
     "lastname" : "namu",
     "password": "password"
 }
+
+###
+POST http://localhost:7000/product
+Content-Type: application/json
+
+{
+    "id":"randomid",
+    "name":"Table",
+    "description":"best table in town",
+    "imageurl":"randomurl",
+    "price":123,
+    "discount":10
+}
+
+###
+GET http://localhost:7000/product

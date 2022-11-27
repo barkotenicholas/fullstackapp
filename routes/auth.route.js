@@ -9,4 +9,6 @@ router.post('/login',LoginUser);
 /*Sign up Route */
 router.post('/signup',signUp);
 
+
+
 export default router

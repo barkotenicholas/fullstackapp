@@ -17,7 +17,6 @@ const sqlConfig = {
         trustServerCertificate: true // change to true for local dev / self-signed certs
     }
 }
-console.log(process.env.DB_USER);
 
 const poolPromise = mssql.connect(sqlConfig).then(pool => {
 
