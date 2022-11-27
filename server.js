@@ -6,5 +6,5 @@ dotenv.config()
 
 /* Start server*/ 
 app.listen(process.env.PORT || 4000,()=>{
-    console.info(`Server started at port ${process.env.PORT}`)
+    console.log(`⚡️[server]: Server is running at https://localhost:${process.env.PORT}`);
 })
