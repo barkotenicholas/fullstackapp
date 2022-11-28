@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { AddProduct, GetAllProducts } from "../controllers/product.controller.js";
+import { AddProduct, GetAllProducts , Delete } from "../controllers/product.controller.js";
 
 /* Configure Route */
 const router = Router()
@@ -10,9 +10,7 @@ router.post('/',AddProduct);
 /* Get Product Route */
 router.get('/',GetAllProducts);
 /* Delete Product Route */
-router.delete('/',(req,res)=>{
-
-});
+router.delete('/',Delete);
 
 
 export default router

@@ -4,7 +4,7 @@ Content-Type: application/json
 
 {
     "email":"a@gmail.com",
-    "password": "passwosdsfrd"
+    "password": "password"
 }
 
 ###
@@ -62,7 +62,7 @@ Content-Type: application/json
 
 {   
     "user_id": "f7dd0d7b-558c-4206-8170-cbac8b20c543",
-    "quantity": 123,
+    "quantity": 1,
     "product_id": "randomid",
     "product_name": "Table",
     "product_desc": "best table in town",

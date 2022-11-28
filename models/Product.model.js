@@ -23,3 +23,13 @@ export const GetProducts = async () => {
 
     return rs.recordset;
 }
+
+export const DeleteProduct = async (id) => {
+
+    const pool = await poolPromise
+    const response = await pool.request()
+        .input('id', id)
+        .execute('spDeleteProduct')
+
+    return response.rowsAffected
+}

@@ -28,11 +28,10 @@ export const AddCart = async (req, res) => {
 }
 
 export const GetCart = async (req, res) => {
-
     try {
 
-        const { uid } = req.body;
-
+        const  uid  = req.query.id;
+        
         const rs = await GetCartItem(uid)
         console.log(rs);
         if (rs.length === 0) return res.status(200).json({ message: "There are no cart items" });

@@ -13,8 +13,8 @@ export const LoginUser = async (req, res) => {
         const result = await Login(email);
         if (!result) return res.status(403).json({ message: `user not found` });
         const checkpwd = await bcrypt.compare(password, result.password)
-        if (!checkpwd) return res.status(200).json({ message: 'wrong password' });
-        const { firstname, lastname } = result;
+        if (!checkpwd) return res.status(403).json({ message: 'wrong password' });
+        const { id, firstname, lastname } = result;
         const token = jwt.sign(
             {
                 firstname,
@@ -28,6 +28,7 @@ export const LoginUser = async (req, res) => {
         )
         return res.status(200).json({
             auth: true,
+            id:id,
             message: 'log in success',
             firstname: firstname,
             lastname: lastname,
